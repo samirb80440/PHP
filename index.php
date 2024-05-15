@@ -134,6 +134,7 @@ $capitales = array(
    "Vilnius" => "Lituanie",
    "Zagreb" => "Croatie"
 );
+asort($capitales);
 $nb = count($capitales);
 echo"Le tableau contient ".$nb." éléments."; 
 foreach($capitales as $cle => $valeur) 
