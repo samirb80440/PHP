@@ -134,18 +134,30 @@ $capitales = array(
    "Vilnius" => "Lituanie",
    "Zagreb" => "Croatie"
 );
-asort($capitales);
-$nb = count($capitales);
-echo"Le tableau contient ".$nb." éléments."; 
-foreach($capitales as $cle => $valeur) 
+$capitales_trie= array_filter($capitales, function ($ville) {
+   
+   return strpos(strtolower($ville) ,'b')===0;
+},
+ARRAY_FILTER_USE_BOTH);
+foreach($capitales_trie as $key=>$value){
+   echo $key."=>".$value."<br>";
+};
+
+
+// asort($capitales);
+// $nb = count($capitales);
+// echo"Le tableau contient ".$nb." éléments."; 
+// foreach($capitales as $cle => $valeur) 
+// { 
+//    echo $cle ." : ".$valeur."<br>"; 
+// }
+
+/*foreach($capitales as $cle => $ville) 
 { 
-   echo $cle ." : ".$valeur."<br>"; 
+   echo $cle ." : ".$ville."<br>"; 
+
 }
-
-
-
-
-
+*/
 
 
 
