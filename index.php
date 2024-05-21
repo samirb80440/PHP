@@ -160,26 +160,44 @@ foreach($capitales_trie as $key=>$value){
 */
 
 
-$departements = array(
-   "Hauts-de-france" => array("Aisne", "Nord", "Oise", "Pas-de-Calais", "Somme"),
-   "Bretagne" => array("Côtes d'Armor", "Finistère", "Ille-et-Vilaine", "Morbihan"),
-   "Grand-Est" => array("Ardennes", "Aube", "Marne", "Haute-Marne", "Meurthe-et-Moselle", "Meuse", "Moselle", "Bas-Rhin", "Haut-Rhin", "Vosges"),
-   "Normandie" => array("Calvados", "Eure", "Manche", "Orne", "Seine-Maritime")
-);
+//$departements = array(
+//   "Hauts-de-france" => array("Aisne", "Nord", "Oise", "Pas-de-Calais", "Somme"),
+   //"Bretagne" => array("Côtes d'Armor", "Finistère", "Ille-et-Vilaine", "Morbihan"),
+   //"Grand-Est" => array("Ardennes", "Aube", "Marne", "Haute-Marne", "Meurthe-et-Moselle", "Meuse", "Moselle", "Bas-Rhin", "Haut-Rhin", "Vosges"),
+   //"Normandie" => array("Calvados", "Eure", "Manche", "Orne", "Seine-Maritime")
+//);
 
 
-asort($departements);
+//asort($departements);
 
-foreach( $departements as $key => $value )
-{
-echo $key .count($departements[$key]). ': <br>';
+//foreach( $departements as $key => $value )
+//{
+//echo $key .count($departements[$key]). ': <br>';
 
-foreach( $value as $valeur )
-echo ' ' . $valeur . '<br>';
+//foreach( $value as $valeur )
+//echo ' ' . $valeur . '<br>';
 
-echo '<br>';
-}
+//echo '<br>';
+//}
 
+   $test = "Afbfqf54";
+   $resultat = complex_password($test);
+   if($resultat){
+       echo "mot de passe valide";
+   }
+   if($resultat==false){
+       echo "mot de passe invalide";
+   }
+   
+   function complex_password($motdepasse){
+   $majfiltre = "/[A-Z]/";
+   $chiffrefiltre = "/[0-9]/";
+   if(strlen($motdepasse)==8 and preg_match($majfiltre ,$motdepasse)==1 and preg_match($chiffrefiltre ,$motdepasse)==1){//check si toute est en ordre
+       return true;
+   }else{
+       return false;
+   }
+   }
 
 
 ?>
