@@ -180,27 +180,60 @@ foreach($capitales_trie as $key=>$value){
 //echo '<br>';
 //}
 
-   $test = "Afbfqf54";
-   $resultat = complex_password($test);
-   if($resultat){
-       echo "mot de passe valide";
-   }
-   if($resultat==false){
-       echo "mot de passe invalide";
-   }
+   //$test = "Afbfqf54";
+   //$resultat = complex_password($test);
+   //if($resultat){
+       //echo "mot de passe valide";
+   //}
+   //if($resultat==false){
+       //echo "mot de passe invalide";
+   //}
    
-   function complex_password($motdepasse){
-   $majfiltre = "/[A-Z]/";
-   $chiffrefiltre = "/[0-9]/";
-   if(strlen($motdepasse)==8 and preg_match($majfiltre ,$motdepasse)==1 and preg_match($chiffrefiltre ,$motdepasse)==1){//check si toute est en ordre
-       return true;
-   }else{
-       return false;
-   }
-   }
-   
+   //function complex_password($motdepasse){
+   //$majfiltre = "/[A-Z]/";
+   //$chiffrefiltre = "/[0-9]/";
+   //if(strlen($motdepasse)==8 and preg_match($majfiltre ,$motdepasse)==1 and preg_match($chiffrefiltre ,$motdepasse)==1){
+  // }else{
+   //    return false;
+   //}
+   //}
+  
 
 
+
+//$date = date_create('14-07-2019');
+//echo date_format($date, 'Y-m-d-W H//:i:s');
+
+//$dateexo= new DateTime("14-07-2019");
+//$semainedate = $dateexo->format("W");//renvoie le nombre de semaine passer depuis le debut de l'année
+//echo "le nombre de semaine passer le ".$dateexo->format("d/m/Y")." est : ".$semainedate."<br>";
+
+//$datefinform= new DateTime("06/07/2024 UTC");
+//$datedujour= new DateTime(date("Y-m-d"));
+//echo $datedujour->format("d/m/Y")."<br>";
+//$ecartdejour = $datedujour->diff($datefinform);
+//echo "nous somme le : ".date("d/m/Y")." le module ce terminant le : ".$datefinform->format("d/m/Y")." il reste ".$ecartdejour->format("%a")." jour <br>";
+//if($datedujour->format("L")){
+ //  echo "cette anée est bissextile<br>";
+//}
+//else{
+//   echo "cette anée n'est pas bissextile<br>";
+//}
+
+//$oDate =  DateTime::createFromFormat("d/m/Y H:i:s", "32/13/2019");
+
+//$errors = DateTime::getLastErrors();
+
+//if ($errors["error_count"]>0 || $errors["warning_count"]>0) {
+    //echo "ARGHHHH !";
+//}
+
+//echo date("H")."h".date("i")."<br>";
+
+$timestamp = 1000200000;
+$date = new DateTime();
+$date->setTimestamp($timestamp);
+echo $date->format('Y-m-d')
 ?>
 </body></html> 
 </body>
