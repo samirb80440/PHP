@@ -230,11 +230,89 @@ foreach($capitales_trie as $key=>$value){
 
 //echo date("H")."h".date("i")."<br>";
 
-$timestamp = 1000200000;
-$date = new DateTime();
-$date->setTimestamp($timestamp);
-echo $date->format('Y-m-d')
-?>
+//$timestamp = 1000200000;
+//$date = new DateTime();
+//$date->setTimestamp($timestamp);
+//echo $date->format('Y-m-d')
+
+
+
+
+
+ // On déclare une variable dont la valeur (contenu) sera écrite dans le fichier
+ //$myVar = "Bonjour le monde";
+
+// Ouverture en écriture seule 
+//fp = fopen("essai.txt", "a"); 
+
+// Ecriture du contenu ($myVar) 
+//fputs($fp, $myVar); 
+
+// Fermeture du fichier  
+//fclose($fp); 
+
+
+
+
+// Ouverture en lecture seule  
+//$fp = fopen("essai.txt", "r"); 
+
+// Boucle jusqu'à la fin du fichier
+//while (!feof($fp)) 
+//{ 
+    // Lecture d'une ligne, le contenu de la ligne est affecté à la variable $ligne  
+    //$ligne = fgets($fp, 4096); 
+    //echo $ligne."<br>"; 
+//} 
+
+
+
+//$myVar = "Bonjour le monde";
+
+// Ouverture en écriture seule 
+//$fp = fopen("essai.txt", "a"); 
+
+// Ecriture du contenu ($myVar) 
+//fputs($fp, $myVar); 
+
+// Fermeture du fichier  
+//fclose($fp);
+
+//$text = file('liens.txt');
+//file('https://ncode.amorce.org/ressources/Pool/NEW_MS_FULL_STACK/WEB_PHP/liens.txt');
+//foreach($text as $key => $value){
+   //echo '<a href="'.$value.'"\>'.$value.'<\a><br>';
+//}
+//?>
+
+<table class="table">
+<thead>
+    <tr>
+      <th scope="col">Surname</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+    </tr>
+  </thead>
+        <tbody>
+            <?php 
+            $list = file('https://ncode.amorce.org/customers.csv');
+                foreach($list as $key => $value){
+                    $pieces = explode(",", $value);
+                    echo '<tr>';
+                    foreach($pieces as $key2 => $value2){
+                        echo "<td>".$value2.'</td>';
+                    }
+                    echo "</tr>";
+                    }
+            ?>
+        </tbody>
+        </table>
+
+
+
 </body></html> 
 </body>
 </html>
