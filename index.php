@@ -309,6 +309,5 @@ foreach($capitales_trie as $key=>$value){
             ?>
         </tbody>
         </table>
-</body></html> 
 </body>
 </html>
