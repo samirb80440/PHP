@@ -284,7 +284,6 @@ foreach($capitales_trie as $key=>$value){
    //echo '<a href="'.$value.'"\>'.$value.'<\a><br>';
 //}
 //?>
-
 <table class="table">
 <thead>
     <tr>
@@ -310,9 +309,6 @@ foreach($capitales_trie as $key=>$value){
             ?>
         </tbody>
         </table>
-
-
-
 </body></html> 
 </body>
 </html>
