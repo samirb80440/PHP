@@ -21,7 +21,6 @@ echo '<table border="1" width="400">';
    echo '<tr>';
    echo '<td>0</td>';
    for ($j=1; $j<=$NbrCol; $j++) {
-      .
       echo '<td">'.$j.'</td>';
    }
    echo '</tr>';
