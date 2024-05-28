@@ -13,12 +13,7 @@ while ($a < 150) {
     echo $a; 
     $a=$a+2; 
 } */
-/*$sauvegarde = 1; 
-while ($sauvegarde < 501) { 
-    echo $sauvegarde="Je dois faire des sauvegardes régulières de mes fichiers"; A réparer la boucle
- 
-} 
-/*    
+
 /*$NbrCol = 9;
 $NbrLigne = 9;
 echo '<table border="1" width="400">';
@@ -283,7 +278,12 @@ foreach($capitales_trie as $key=>$value){
 //foreach($text as $key => $value){
    //echo '<a href="'.$value.'"\>'.$value.'<\a><br>';
 //}
-//?>
+//
+//for ($i=0;$i!=501;$i++){//limiter la boucle car flemme des 500 fois
+   //echo "Je dois faire des sauvegardes régulières de mes fichiers.".$i ."<br>";
+//}
+//$N =0;
+?>
 <table class="table">
 <thead>
     <tr>
