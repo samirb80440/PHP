@@ -1,34 +1,33 @@
 <?php
-// Print a greeting message with the user's first and last name
-echo "bonjour " . $_REQUEST['prenom'] . " " . $_REQUEST['nom'] . "<br>";
+// Affichage d'un message de bienvenue avec le prénom et le nom de l'utilisateur
+echo "bonjour ". $_REQUEST['prenom']. " ". $_REQUEST['nom']. "<br>";
 
-// Loop through all request variables and print their keys
-foreach($_REQUEST as $key){
-    echo $key."<br>";
+// Parcours de toutes les variables de requête et affichage de leurs clés
+foreach ($_REQUEST as $key) {
+    echo $key. "<br>";
 }
 
-// Print a message about the user's web surfing habits
+// Affichage d'un message sur les habitudes de navigation sur le web de l'utilisateur
 echo "Tu surfes sur le web en semaine plutôt le : ";
 
-// Loop through the "jours" array and print each day
-foreach ($_REQUEST["jours"] as $jour)   
-{
-    echo  $jour." - <br>";
+// Parcours du tableau "jours" et affichage de chaque jour
+foreach ($_REQUEST["jours"] as $jour) {
+    echo $jour. " - <br>";
 }
 
-// Check if the "update" button was clicked
-if ( isset( $_POST['update'])) {
+// Vérification si le bouton "update" a été cliqué
+if (isset($_POST['update'])) {
     echo "mise a jour";
 }
-// Check if the "delete" button was clicked
-elseif ( isset($_POST['delete'])) {
+// Vérification si le bouton "delete" a été cliqué
+elseif (isset($_POST['delete'])) {
     echo "suppression";
 }
-// Check if the "create" button was clicked
-elseif ( isset($_POST['create'])) {
+// Vérification si le bouton "create" a été cliqué
+elseif (isset($_POST['create'])) {
     echo "Création";
 }
 
-// Print a line break
-echo"<br>";
+// Affichage d'un saut de ligne
+echo "<br>";
 ?>
