@@ -7,7 +7,7 @@ foreach ($_REQUEST as $key) {
 var_dump($_FILES["fichier"]);
 // Vérification s'il y a des erreurs dans le tableau $_FILES["fichier"]["error"]
 if (sizeof($_FILES["fichier"]["error"]) > 0) {
-    echo "yop";
+    echo "erreur";
     echo $_FILES["fichier"]["error"];
 }
 echo "<br>";
