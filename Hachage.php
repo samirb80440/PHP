@@ -16,6 +16,15 @@ $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
 // Affichage du nouveau hachage généré
 echo $hashed_password;
+
+
+
+
+
+
+
+
+
 ?>
 </body>
 </html>

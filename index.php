@@ -232,6 +232,11 @@ if ($errors["error_count"] > 0 || $errors["warning_count"] > 0) {
 // Affichez l'heure actuelle
 echo date("H"). "h". date("i"). "<br>";
 
+// Ajouter un  mois à la date
+$date = new DateTime();
+$date->modify('+1 month');
+echo $date->format('Y-m-d');
+
 // Créez un nouvel objet DateTime avec un timestamp
 $timestamp = 1000200000;
 $date = new DateTime();
